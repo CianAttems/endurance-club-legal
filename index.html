@@ -1,0 +1,291 @@
+<title>Endurance Club Privacy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #F6FAFC;
+    --surface: #FFFFFF;
+    --text: #1B2733;
+    --text-muted: #55677A;
+    --accent: #0090BE;
+    --accent-soft: #E3F3F9;
+    --border: #DCE7EE;
+    --font-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+    --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E161D;
+      --surface: #15212A;
+      --text: #E7EFF4;
+      --text-muted: #93A7B6;
+      --accent: #3FC3EE;
+      --accent-soft: #16303A;
+      --border: #223341;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E161D;
+    --surface: #15212A;
+    --text: #E7EFF4;
+    --text-muted: #93A7B6;
+    --accent: #3FC3EE;
+    --accent-soft: #16303A;
+    --border: #223341;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(34px, 6vw, 46px);
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+    margin: 4px 0 0;
+    text-wrap: balance;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .meta-row span b { color: var(--text); font-weight: 500; }
+
+  .tldr {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 20px 22px;
+    margin-bottom: 44px;
+  }
+  .tldr .eyebrow { margin-bottom: 8px; display: block; }
+  .tldr ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+  }
+  .tldr li { margin-bottom: 6px; }
+  .tldr li:last-child { margin-bottom: 0; }
+
+  section { margin-bottom: 38px; }
+  section:last-of-type { margin-bottom: 0; }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  h2 .num {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0;
+  }
+
+  p { margin: 0 0 14px; max-width: 66ch; }
+  p:last-child { margin-bottom: 0; }
+
+  ul.plain { margin: 0 0 14px; padding-left: 20px; max-width: 66ch; }
+  ul.plain li { margin-bottom: 8px; }
+  ul.plain li:last-child { margin-bottom: 0; }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 14px;
+    font-size: 15.5px;
+  }
+  table.data-table th, table.data-table td {
+    text-align: left;
+    padding: 10px 14px 10px 0;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.data-table th {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .table-wrap { overflow-x: auto; }
+
+  .not-list {
+    display: grid;
+    gap: 10px;
+    margin: 6px 0 14px;
+  }
+  .not-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-family: var(--font-body);
+  }
+  .not-item .mark {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    flex: none;
+    line-height: 1.5;
+  }
+
+  code, .inline-mono { font-family: var(--font-mono); font-size: 0.88em; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  a { color: var(--accent); }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <span class="eyebrow">Endurance Club</span>
+    <h1>Privacy Policy</h1>
+    <div class="meta-row">
+      <span>Effective <b>13 September 2026</b></span>
+      <span>Beta / testing release</span>
+      <span>App version <b>0.1.0</b></span>
+    </div>
+  </header>
+
+  <div class="tldr">
+    <span class="eyebrow">Plain-language summary</span>
+    <ul>
+      <li>Endurance Club is a race calendar app. You don't need an account, email, or password to use it.</li>
+      <li>Your preferences (liked races, home location, unit setting) are stored <b>on your device</b>, not in a personal account on our servers.</li>
+      <li>If you enter a home postcode, it's converted to map coordinates so we can show you nearby races and sort by distance — that lookup goes to OpenStreetMap, a nonprofit mapping service, and to our database when you search.</li>
+      <li>We don't run ads, sell data, or track you across other apps or websites.</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>Who this covers</h2>
+    <p>This policy describes what Endurance Club ("the app," "we") collects and how it's used, for anyone installing it as part of testing or early access. It's written for a small beta group ahead of a public release, and we'll update it as the app grows — see the changes section below.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>What we collect</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <tr><th>Information</th><th>Where it's stored</th><th>Why</th></tr>
+        <tr>
+          <td>Home postcode/city and country, and the map coordinates we derive from it</td>
+          <td>On your device</td>
+          <td>To sort races by distance and show a "near you" view</td>
+        </tr>
+        <tr>
+          <td>Liked and attending races, sport interests, distance unit (km/mi)</td>
+          <td>On your device</td>
+          <td>To remember your preferences between sessions</td>
+        </tr>
+        <tr>
+          <td>A randomly generated installation ID (not tied to your name or email)</td>
+          <td>On your device; shared with our database only if you send or use an invite link</td>
+          <td>To record which install invited another, for a future friend-connect feature</td>
+        </tr>
+        <tr>
+          <td>Which races you "like"</td>
+          <td>Sent to our database, without any personal identifier attached</td>
+          <td>To prioritize which races we research and add full details for</td>
+        </tr>
+      </table>
+    </div>
+    <p>We do not ask for your name, email address, or a password to use the app. There is currently no user account system — the app works entirely from the data on your own device, plus race data it reads from our database.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Who we share it with</h2>
+    <ul class="plain">
+      <li><b>Supabase</b> (our database host) stores the race calendar itself and receives your search/filter criteria — including your coordinates, if you've set a home location and search by distance — to return matching results. It does not receive your name or email.</li>
+      <li><b>OpenStreetMap / Nominatim</b>, a nonprofit geocoding service, receives the postcode or city text you enter, in order to return map coordinates. We don't send them anything else about you.</li>
+      <li><b>Expo/EAS</b>, our app-hosting infrastructure, delivers app updates and may collect standard, non-identifying technical diagnostics (crash logs, device type) the same way most mobile apps built on this infrastructure do.</li>
+    </ul>
+    <p>We do not sell any information, and we do not share it with data brokers or advertisers.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>What we don't do</h2>
+    <div class="not-list">
+      <div class="not-item"><span class="mark">—</span><span>No advertising or ad-tracking SDKs are included in this build.</span></div>
+      <div class="not-item"><span class="mark">—</span><span>No location tracking in the background — your coordinates are only used when the app is open and you've set or used a home location.</span></div>
+      <div class="not-item"><span class="mark">—</span><span>No cross-app or cross-site tracking, and no data sold to third parties.</span></div>
+      <div class="not-item"><span class="mark">—</span><span>No account, password, or real-name signup required to use the app.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Your control over your data</h2>
+    <p>Since most of your data lives on your device, clearing the app's storage or uninstalling it removes your preferences, liked races, and home location entirely. If you'd like the race-like signals or referral record tied to your installation ID removed from our database, email us at the address below and we'll delete them.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Children's privacy</h2>
+    <p>Endurance Club is not directed at children, and we don't knowingly collect information from anyone under 13. If you believe a child has used the app and provided information to us, contact us and we'll remove it.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Changes to this policy</h2>
+    <p>As the app moves from testing into public release — adding accounts, a friends system, or (later) advertising — this policy will be updated to reflect it, and the effective date above will change. Testers will be notified of material changes.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>Contact</h2>
+    <p>Questions, deletion requests, or feedback: <a href="mailto:cianattems@gmail.com">cianattems@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <span>Endurance Club</span>
+    <span>Version 1.0 — 13 Sept 2026</span>
+  </footer>
+</div>
