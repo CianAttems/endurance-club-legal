@@ -190,102 +190,117 @@
 
 <div class="page">
   <header class="masthead">
-    <span class="eyebrow">Endurance Club</span>
+    <span class="eyebrow">The Endurance Club</span>
     <h1>Privacy Policy</h1>
     <div class="meta-row">
-      <span>Effective <b>13 September 2026</b></span>
+      <span>Effective <b>20 October 2026</b></span>
       <span>Beta / testing release</span>
-      <span>App version <b>0.1.0</b></span>
+      <span>App version <b>0.1.2</b></span>
     </div>
   </header>
 
   <div class="tldr">
     <span class="eyebrow">Plain-language summary</span>
     <ul>
-      <li>Endurance Club is a race calendar app. You don't need an account, email, or password to use it.</li>
-      <li>Your preferences (liked races, home location, unit setting) are stored <b>on your device</b>, not in a personal account on our servers.</li>
-      <li>If you enter a home postcode, it's converted to map coordinates so we can show you nearby races and sort by distance — that lookup goes to OpenStreetMap, a nonprofit mapping service, and to our database when you search.</li>
-      <li>We don't run ads, sell data, or track you across other apps or websites.</li>
+      <li>The Endurance Club is a race calendar and community app. You create an account with your email and a password.</li>
+      <li>We store your profile (name, date of birth, gender, home location, sports), your liked and attended races, your friends and your chat messages on our servers, so they follow you between devices.</li>
+      <li>Your date of birth is never shown to other users. Friends see your name, photo, home city and the races you attend.</li>
+      <li>You can delete your account and all its data yourself, inside the app: Profile, then Delete account.</li>
+      <li>We do not run ads, sell data, or track you across other apps or websites. The app is for people aged 18 and over.</li>
     </ul>
   </div>
 
   <section>
-    <h2><span class="num">01</span>Who this covers</h2>
-    <p>This policy describes what Endurance Club ("the app," "we") collects and how it's used, for anyone installing it as part of testing or early access. It's written for a small beta group ahead of a public release, and we'll update it as the app grows — see the changes section below.</p>
+    <h2><span class="num">01</span>Who we are</h2>
+    <p>The Endurance Club ("the app," "we") is operated by Cian Attems, Vienna, Austria, who is the data controller under the GDPR. Contact: <a href="mailto:attemsphotography@gmail.com">attemsphotography@gmail.com</a>. This is a beta release for a small group of testers ahead of a public launch, and the policy will be updated as the app grows.</p>
   </section>
 
   <section>
     <h2><span class="num">02</span>What we collect</h2>
     <div class="table-wrap">
       <table class="data-table">
-        <tr><th>Information</th><th>Where it's stored</th><th>Why</th></tr>
-        <tr>
-          <td>Home postcode/city and country, and the map coordinates we derive from it</td>
-          <td>On your device</td>
-          <td>To sort races by distance and show a "near you" view</td>
-        </tr>
-        <tr>
-          <td>Liked and attending races, sport interests, distance unit (km/mi)</td>
-          <td>On your device</td>
-          <td>To remember your preferences between sessions</td>
-        </tr>
-        <tr>
-          <td>A randomly generated installation ID (not tied to your name or email)</td>
-          <td>On your device; shared with our database only if you send or use an invite link</td>
-          <td>To record which install invited another, for a future friend-connect feature</td>
-        </tr>
-        <tr>
-          <td>Which races you "like"</td>
-          <td>Sent to our database, without any personal identifier attached</td>
-          <td>To prioritize which races we research and add full details for</td>
-        </tr>
+        <tr><th>Information</th><th>Why we need it</th></tr>
+        <tr><td>Email address and password (the password is stored only as a hash)</td><td>To create your account and sign you in</td></tr>
+        <tr><td>Name</td><td>Shown to friends and in search, so people can find and recognise you</td></tr>
+        <tr><td>Date of birth and gender (both required)</td><td>To confirm you are 18 or older, and to give clubs anonymous age and gender statistics. Never shown to other users.</td></tr>
+        <tr><td>Home postcode, city, country and the map coordinates derived from them; distance unit</td><td>To show distances to races and filter by distance from home</td></tr>
+        <tr><td>Sports and destination countries you pick</td><td>To personalise your race list and recommendations</td></tr>
+        <tr><td>Profile photo and photos you add to race reviews (optional)</td><td>To show on your profile and reviews</td></tr>
+        <tr><td>Races you like or attend, race reviews and your race history</td><td>To power your lists, calendar, friends' activity feed and recommendations</td></tr>
+        <tr><td>Friend requests and connections</td><td>To connect you with training partners</td></tr>
+        <tr><td>Chat messages (direct, group and club chats) and message reports you send</td><td>To deliver messages, and to moderate abuse</td></tr>
+        <tr><td>Push notification token</td><td>To send notifications you allow, such as messages and friend requests</td></tr>
+        <tr><td>A private calendar-feed token</td><td>To let you subscribe to your attended races in your phone calendar</td></tr>
+        <tr><td>Crash logs, diagnostics and app performance data</td><td>To find and fix bugs and keep the app fast and stable</td></tr>
       </table>
     </div>
-    <p>We do not ask for your name, email address, or a password to use the app. There is currently no user account system — the app works entirely from the data on your own device, plus race data it reads from our database.</p>
+    <p>We derive your approximate home location only from the postcode or city you type in. The app does not read your phone's GPS and does not track your location in the background.</p>
   </section>
 
   <section>
-    <h2><span class="num">03</span>Who we share it with</h2>
+    <h2><span class="num">03</span>Who can see what</h2>
     <ul class="plain">
-      <li><b>Supabase</b> (our database host) stores the race calendar itself and receives your search/filter criteria — including your coordinates, if you've set a home location and search by distance — to return matching results. It does not receive your name or email.</li>
-      <li><b>OpenStreetMap / Nominatim</b>, a nonprofit geocoding service, receives the postcode or city text you enter, in order to return map coordinates. We don't send them anything else about you.</li>
-      <li><b>Expo/EAS</b>, our app-hosting infrastructure, delivers app updates and may collect standard, non-identifying technical diagnostics (crash logs, device type) the same way most mobile apps built on this infrastructure do.</li>
+      <li><b>Other members</b> who search for you can see your name, profile photo and home city and country.</li>
+      <li><b>Accepted friends</b> can also see the races you attend and like, and can chat with you.</li>
+      <li><b>Club organisers</b> only see anonymous, aggregated statistics (for example age groups), never an individual's date of birth.</li>
+      <li><b>Nobody else</b> can see your email address, date of birth, gender or exact coordinates.</li>
     </ul>
-    <p>We do not sell any information, and we do not share it with data brokers or advertisers.</p>
   </section>
 
   <section>
-    <h2><span class="num">04</span>What we don't do</h2>
+    <h2><span class="num">04</span>Who we share it with</h2>
+    <ul class="plain">
+      <li><b>Supabase</b> hosts our database, authentication and file storage. It processes your data on our behalf.</li>
+      <li><b>OpenStreetMap / Nominatim</b>, a nonprofit geocoding service, receives the postcode or city text you enter, to return map coordinates. Nothing else about you is sent.</li>
+      <li><b>Expo</b> delivers push notifications and app updates, and receives your push token and basic device information.</li>
+      <li><b>Sentry</b> receives crash logs, diagnostics and performance data.</li>
+      <li><b>Hotel booking links (Stay22)</b>: if you open a hotel search from a race page, you leave the app and that provider's own privacy policy applies. We may earn a commission on bookings. We do not send them your profile.</li>
+    </ul>
+    <p>We do not sell your information, and we do not share it with data brokers or advertisers.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>What we do not do</h2>
     <div class="not-list">
-      <div class="not-item"><span class="mark">—</span><span>No advertising or ad-tracking SDKs are included in this build.</span></div>
-      <div class="not-item"><span class="mark">—</span><span>No location tracking in the background — your coordinates are only used when the app is open and you've set or used a home location.</span></div>
+      <div class="not-item"><span class="mark">—</span><span>No advertising or ad-tracking SDKs.</span></div>
+      <div class="not-item"><span class="mark">—</span><span>No background location tracking and no GPS access.</span></div>
       <div class="not-item"><span class="mark">—</span><span>No cross-app or cross-site tracking, and no data sold to third parties.</span></div>
-      <div class="not-item"><span class="mark">—</span><span>No account, password, or real-name signup required to use the app.</span></div>
+      <div class="not-item"><span class="mark">—</span><span>No health, fitness-tracker or financial data collected.</span></div>
     </div>
   </section>
 
   <section>
-    <h2><span class="num">05</span>Your control over your data</h2>
-    <p>Since most of your data lives on your device, clearing the app's storage or uninstalling it removes your preferences, liked races, and home location entirely. If you'd like the race-like signals or referral record tied to your installation ID removed from our database, email us at the address below and we'll delete them.</p>
+    <h2><span class="num">06</span>How long we keep it, and deleting your account</h2>
+    <p>We keep your data for as long as your account exists. You can delete your account at any time inside the app (Profile, then Delete account). Deletion permanently removes your account, profile, liked and attended races, reviews, friend connections, chat messages and push tokens. You can also request deletion by email, or see the steps on our <a href="delete-account.html">delete account page</a>. Encrypted backups are overwritten within 90 days.</p>
   </section>
 
   <section>
-    <h2><span class="num">06</span>Children's privacy</h2>
-    <p>Endurance Club is not directed at children, and we don't knowingly collect information from anyone under 13. If you believe a child has used the app and provided information to us, contact us and we'll remove it.</p>
+    <h2><span class="num">07</span>Your rights</h2>
+    <p>Under the GDPR you have the right to access, correct, export or delete your data, to object to or restrict its processing, and to withdraw consent at any time. You can edit your profile in the app, and you can contact us for anything else. You may also complain to the Austrian Data Protection Authority (dsb.gv.at). We process your data to run the app you asked to use (contract), to keep it secure and moderated (legitimate interest), and, where you opt in, to send notifications (consent).</p>
   </section>
 
   <section>
-    <h2><span class="num">07</span>Changes to this policy</h2>
-    <p>As the app moves from testing into public release — adding accounts, a friends system, or (later) advertising — this policy will be updated to reflect it, and the effective date above will change. Testers will be notified of material changes.</p>
+    <h2><span class="num">08</span>Age limit</h2>
+    <p>The Endurance Club is for people aged 18 and over. We ask for your date of birth when you sign up and do not allow accounts for anyone younger. If you believe a minor has an account, contact us and we will delete it.</p>
   </section>
 
   <section>
-    <h2><span class="num">08</span>Contact</h2>
-    <p>Questions, deletion requests, or feedback: <a href="mailto:attemsphotography@gmail.com">attemsphotography@gmail.com</a>.</p>
+    <h2><span class="num">09</span>Security</h2>
+    <p>Data is encrypted in transit (HTTPS), passwords are stored hashed, and access to other members' data is restricted by database access rules.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">10</span>Changes to this policy</h2>
+    <p>If we change what we collect, for example by adding advertising, we will update this policy and the effective date above, and notify users of material changes.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">11</span>Contact</h2>
+    <p>Questions, access or deletion requests, or feedback: <a href="mailto:attemsphotography@gmail.com">attemsphotography@gmail.com</a>.</p>
   </section>
 
   <footer>
-    <span>Endurance Club</span>
-    <span>Version 1.0 — 13 Sept 2026</span>
+    <span>The Endurance Club</span>
+    <span>Version 2.0 — 20 Oct 2026</span>
   </footer>
 </div>
